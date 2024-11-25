@@ -14,6 +14,8 @@ int? n2 = null;     // null 가능 타입. 유연성이 있지만 안전하지 않음.
 // #4. 그런데, reference type 은 항상 null 가능하므로
 //    선택할수 없습니다. (항상 안전하지 않음)
 
-// #5. 그래서 C# 9.0 부터 nullable reference 라는 문법 도입
+// #5. 그래서 C# 8.0 부터 nullable reference 라는 문법 도입(65p)
 string s3 = null;  // null 불가능 타입
-string? s3 = null; // null 가능 타입.
+                    // null 을 넣으면, 컴파일 에러는 아니지만
+                    // 경고 발생
+string? s4 = null; // null 가능 타입.
