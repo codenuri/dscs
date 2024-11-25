@@ -20,6 +20,13 @@ C# Programming 과정입니다.
              객관식 + 단답형 20문제 (필기)
 
 
+.net framework : 최초 붙인 이름. PC 를 고려한 설계(4.8 까지)
+.net core      : 모바일등을 고려한 새로운 Frame work 
+                 (6.0 까지 )
+
+.Net : .net framework 와 .net core 를 한가지로 합한 버전
+       요즘은 이버전만 관리됨
+ 	(최신 버전은 9.0)
 
 
 
