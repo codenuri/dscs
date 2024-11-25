@@ -26,12 +26,21 @@ z = t1.Item3;
 WriteLine($"{x} {y} {z}"); // 1, 2, 3
 
 
-// #3. 아래 2줄의 차이점을 명확히 알아 두세요
-(int a1, int a2, int a3) t2 = (1, 2, 3);
-(int b1, int b2, int b3)    = (4, 5, 6);
+// #3. 아래 2줄의 차이점을 명확히 알아 두세요 - 49 page 아래 부분
+(int a1, int a2, int a3) t2 = (1, 2, 3); // t2라는 튜플 생성, a1, a2, a3는
+                                         // 각 요소의 이름.
+
+(int b1, int b2, int b3)    = (4, 5, 6); // 위에 있는 t2라는 이름이 없습니다.
+                                         // tuple destruction입니다.
+                                         // int b1 = 4
+                                         // int b2 = 5
+                                         // int b3 = 6
+
 
 int a1 = 0; // ok
-//int b1 = 0; // error
+//int b1 = 0; // error. 위 33번째 줄에서 이미 선언된 이름.
 
 WriteLine($"{t2.a1} {t2.a2} {t2.a3}");
 WriteLine($"{b1} {b2} {b3}");
+
+// CLR via C# : 최고의 C# 서적으로 알려진 책. 2000년대 초반 서적
