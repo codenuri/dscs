@@ -10,5 +10,9 @@ int n1 = 0;
 
 // #3. Nullable<int> 는 null 이 될수 있습니다.
 Nullable<int> n3 = null;
+//Nullable<string> n4 = null; // error. 
+                    // Generic 인자로 Value Type 만 가능
 
+// 단축 표기법 존재
+int? n4 = null; // Nullable<int> n4 = null 과 완전히 동일
 
