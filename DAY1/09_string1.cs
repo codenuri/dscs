@@ -26,8 +26,16 @@ s2 = "XY"; // 어?? 변경한거 아닌가요 ?
 
 
 // 이제 아래 코드의 결과를 정확히 이해해 봅시다.
+// 42 page 그림. 
 string s3 = "AB";
 string s4 = s3;
 
-s3 = "XY";
+WriteLine($"{object.ReferenceEquals(s3, s4)}");
+
+s4 = "XY";
+    // new string("XY") 즉, 새로운 객체를 만든 것
+
 WriteLine($"{s3} {s4}");
+WriteLine($"{object.ReferenceEquals(s3, s4)}");
+
+// object.ReferenceEquals(a, b) : a, b가 동일한 객체를 가리키는지 조사
