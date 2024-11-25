@@ -9,7 +9,7 @@ Console.Write("press any key >> ");
 
 // 버퍼가 아닌 키보드에서 직접 입력
 // => ENTER 필요 없음.
-//ConsoleKeyInfo cki = Console.ReadKey();
-ConsoleKeyInfo cki = Console.ReadKey(true);
+ConsoleKeyInfo cki = Console.ReadKey();     // 에코 있음.
+//ConsoleKeyInfo cki = Console.ReadKey(true); // 에코 없음.
 
 Console.WriteLine(cki.KeyChar); 
