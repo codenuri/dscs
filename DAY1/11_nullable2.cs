@@ -31,3 +31,6 @@ if ( n1.HasValue )  // 위와 같은 의미.
 
 int n5 = n1.GetValueOrDefault();  // null 이면 디폴트값(0) 반환
 int n6 = n1.GetValueOrDefault(3); // null 이면 3 반환
+
+
+int n7 = default; // n5 가 이런 방식(즉, int 의 디폴트값 0)
