@@ -22,7 +22,7 @@ var b = (1, 2);		// (int, int) b = (1,2) 이 코드가 tuple
 // #3. 요소 접근
 //  Item1, Item2, ....
 var vt6 = (1, 2, 3);
-vt6.Item1 = 20;				// ok. immutable 
+vt6.Item1 = 20;				// ok. mutable 
 WriteLine($"{vt6.Item1}");	// 20
 
 
