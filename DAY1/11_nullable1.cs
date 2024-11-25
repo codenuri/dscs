@@ -16,3 +16,12 @@ Nullable<int> n3 = null;
 // 단축 표기법 존재
 int? n4 = null; // Nullable<int> n4 = null 과 완전히 동일
 
+// 활용은 메소드등을 만들때 "실패"의 전달로 활용 가능
+int? DoSomething()
+{
+    // 실패를 전달하고 싶다.
+    //return 0;
+    return null;
+}
+// C++ : optional<T>
+// Rust : Option<T>, Result<T,E> 등이 있습니다.
