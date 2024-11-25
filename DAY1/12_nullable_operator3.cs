@@ -34,7 +34,8 @@ if (obj is string s3)
 }
 
 // #2. as 연산자 사용
-string s4 = obj as string;
+//string s4 = (string)obj;    // 실패시 예외
+string s4 = obj as string;  // 실패시 null 반환
               // obj 가 string 타입이면 캐스팅
               // 아니면 null 반환.
 
