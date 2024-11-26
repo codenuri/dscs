@@ -56,5 +56,17 @@ class Program
                     // 단, 이경우 a가 가리키는 것이 Dog가 아니였다면
                     // 실행시간 에러(예외 발생)
 
+        // #5. a가 가리키는 것이 Dog 라는 확신이 없으면
+        //     실행시간에 조사후 사용하면 됩니다.
+        //     is 연산자 사용
+        if ( a is Dog )
+        {
+            ((Dog)a).Color = 10;
+        }
+
+        if ( a is Dog d )  // if (a is Dog) Dog d = (Dog)a;
+        {
+            d.Color = 10; 
+        }
     }
 }
