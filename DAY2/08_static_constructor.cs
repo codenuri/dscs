@@ -16,7 +16,8 @@ class Program
 {
     public static void Main()
     {
-        Train t1 = new Train(); // 생성자 호출                                
+        Train t1 = new Train(); // static 생성자 호출
+                                // 생성자 호출                                
         Train t2 = new Train(); // 생성자 호출                                
         Train t3 = new Train(); // 생성자 호출                                
     }
