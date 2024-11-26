@@ -13,6 +13,7 @@ class Date
 
     // Getter/Setter 를 제공해야 합니다.
     public int GetMonth() => month;
+
     public void SetMonth(int m)
     {
         if (m >= 1 && m <= 12)
@@ -27,6 +28,7 @@ class Program
     {
         Date date = new Date(2024, 11, 26);
 
-        date.day = 50;
+//      date.day = 50; // error. private
+        date.SetMonth(12); // ok. setter/getter 사용
     }
 }
