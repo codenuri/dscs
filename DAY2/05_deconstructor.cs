@@ -20,7 +20,8 @@ class Point3D
     // C#  : 주요한 연산자만 재정의 가능
 
     // 변환 연산자 : 객체 => 다른 타입으로 변환 될때 호출
-    public static  implicit operator int(Point3D p)
+    //  public static  explicit operator int(Point3D p)
+    public static implicit operator int(Point3D p)
     {
         return p.x;
     }
