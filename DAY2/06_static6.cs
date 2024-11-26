@@ -13,7 +13,8 @@ class Program
     {
         M1(); // error. 객체가 없다.
 
-        M2(); // ok. Program.M2()
+        Program.M2(); // 이코드도 ok. 
+        M2(); // ok. Program이름 생략가능.  Program.M2()와 동일
 
         Program pg = new Program();
         pg.M1(); // ok.. 객체를 가지고 호출. 
