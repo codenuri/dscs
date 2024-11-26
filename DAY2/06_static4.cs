@@ -43,6 +43,18 @@ class Date
         }
         return days[m - 1];
     }
+    // 동일한 이름의 메소드를 static, instance로 하는 경우도 많습니다.
+    public bool IsLeapYear()
+    {
+        // 멤버 필드 year 를 가지고 조사
+        return true;
+    }
+    public static bool IsLeapYear(int y)
+    {
+        // 인자 y 를 가지고 조사
+        return true;
+    }
+
 }
 
 class Program
@@ -66,6 +78,7 @@ class Program
 
         // 윤년인지 조사하고 싶다.
         // 다음중 좋은 방법은 ?
+        // => 2개 모두 제공하는 것이 좋은 구현 !!
 
         // 방법 #1. 객체를 만들고 조사하게 하자.
         Date to = new Date(2024, 11, 26);
