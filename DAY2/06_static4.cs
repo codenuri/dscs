@@ -87,5 +87,11 @@ class Program
 
         // 방법 #2. static method로 제공하자.
         bool b2 = Date.IsLeapYear(2024);
+
+
+        // 내일 날짜를 구하는 메소드인 Tomorrow 는 
+        // => 기준이 되는 날짜가 필요합니다.
+        // => instance method로 설계 되어야 합니다.
+        Date d3 = today.Tomorrow();  // 복습할때 구현해 보세요. 
     }
 }
