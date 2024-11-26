@@ -31,5 +31,15 @@ class Program
 
         // Console 클래스의 모든 메소드는 static 입니다.
         // =>그래서 "Console.메소드이름" 으로 사용한것!!!
+        Console.WriteLine("aaa");
     }
 }
+
+// C++/Rust/Python
+// => 일반 함수(멤버가 아닌)도 가능하고
+// => 클래스도 가능
+
+// C#/Java
+// => 일반함수를 만들수 없다.
+// => 모든 것은 클래스의 멤버 함수(메소드) 이어야 한다.
+// => 단, 멤버 함수(메소드)안에 함수를 만드는 local function 지원
