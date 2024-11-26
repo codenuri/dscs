@@ -1,5 +1,11 @@
 ﻿using static System.Console;
 
+// 용어 정리
+//              데이타              함수
+// C++          멤버데이타           멤버함수
+// C#           필드                메소드
+
+
 class Bike
 {
     // public : 멤버가 아닌 다른 메소드에서 접근가능
