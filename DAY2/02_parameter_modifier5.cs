@@ -18,5 +18,10 @@ class Program
 
         bool b2 = int.TryParse("Hello", out int ret2); // 이렇게도 가능
 
+
+//      int? ret2 = int.ParseNullable("Hello"); // 이 메소드가 있으면 
+                                                // 어땠을까 ?
+                                                // 현재는 없습니다.
+                                                // 많은 개발자가 요청!~!
     }
 }
