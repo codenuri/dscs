@@ -37,6 +37,11 @@ class Program
 		int n2 = p2.GetAge();
 
         p2.SetAge(-10); // 이 방식은 안전합니다.
+
+
+        // field 접근 처럼 "간편한데"
+        // setter 처럼 안전하게 할수 없을까 ?
+        // => "Property" 문법
 	
     }
 }
