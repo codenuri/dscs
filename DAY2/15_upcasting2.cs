@@ -19,7 +19,13 @@ class Program
     {
         Animal a = new Cat();
 
-        Dog d = (Dog)a; // 예외 발생. 실행해 보세요. 
+//      Dog d = (Dog)a; // 예외 발생. 실행해 보세요. 
 
+        Dog d = a as Dog;
+
+        if ( d == null )
+            Console.WriteLine("실패");
+        else
+            Console.WriteLine("성공");
     }
 }
