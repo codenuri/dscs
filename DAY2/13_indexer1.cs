@@ -9,10 +9,16 @@ class Sentence
 
     public Sentence( string s)
     {
-        words = s.Split(' ');
+        words = s.Split();
                 // s의 문자열을 단어별로 분리해서 배열로 만들어서 반환
                 // new string[] { "Dog", "is", "Animal"}
     }
+
+    public string Text
+    {
+        get { return words[0]; }
+    }
+
 }
 
 class Program
@@ -25,6 +31,6 @@ class Program
 
 //      s[0] = "Cat";
 
-//      WriteLine(s.Text);	// Cat is Animal
+      WriteLine(s.Text);	// Cat is Animal
     }
 }
