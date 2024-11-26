@@ -23,7 +23,7 @@ class Person
 	private string firstName = null!;
 	private string lastName = null!;
 
-	// required : 반드시 초기화 되어야 한다.(생성자 또는 new Person{이위치}
+	// required : 반드시 초기화 되어야 한다.(생성자 또는 new Person{이위치})
 	public required string FirstName 
 	{
 		get => firstName;
