@@ -25,7 +25,14 @@ class Program
 
     }
 }
+// 언어별 표기법
 // C#     : class Student : Person
 // C++    : class Student : public Person 
 // Python : class Student(Person)
 // Java   : class Student extends Person 
+// Rust   : 상속 문법 없음. 
+
+// 용어
+// Person : Base(기반) class, Super class, Parent class
+
+// Student : Derived(파생)_ class, Sub class, Child class 
