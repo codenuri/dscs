@@ -33,6 +33,7 @@ class Program
 		// C# 7.0 부터 지역변수로도 ref 사용가능합니다.
 
 		ref int r = ref n;  // ref local 이라는 문법
+							// C++ : int& r = n
 
 		r = 20;
 
