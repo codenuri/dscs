@@ -29,6 +29,7 @@ class Program
         int n0 = e.Data1; // property 사용
 
         int n1 = e[0];      // #2. 구현 때문에 가능
+            
         
         int n2 = e["A"];    // #3. 
 
