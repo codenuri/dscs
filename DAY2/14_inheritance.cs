@@ -35,4 +35,4 @@ class Program
 // 용어
 // Person : Base(기반) class, Super class, Parent class
 
-// Student : Derived(파생)_ class, Sub class, Child class 
+// Student : Derived(파생) class, Sub class, Child class 
