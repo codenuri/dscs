@@ -1,5 +1,3 @@
-using System.Security.Cryptography;
-
 class Example
 {
     // #1. 일반적인 property
