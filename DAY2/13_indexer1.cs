@@ -16,7 +16,7 @@ class Sentence
 
     public string Text
     {
-        get { return words[0]; }
+        get { return string.Join(" " , words); }
     }
 
 }
