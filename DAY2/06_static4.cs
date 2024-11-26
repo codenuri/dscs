@@ -33,6 +33,16 @@ class Date
         // 복습할때 제대로 구현해 보세요
         return d;
     }
+
+    public static int HowManyDays(int m, int y = -1)
+    {
+        if ( y != -1 && m == 2)
+        {
+            // y 가 윤년인지 계산해서 반환해야 한다.
+            // 복습시 해보세요. 
+        }
+        return days[m - 1];
+    }
 }
 
 class Program
@@ -45,10 +55,24 @@ class Program
         Date target = today.AfterDays(1000);
 
         // 5월달이 몇일까지 있는지 알고 싶다.
-        Date d = new Date(0, 5, 0);
-        int ret1 = d.HowManyDays(); // 방법 #1. 객체를 만들고 사용하게 하자.
+        // => 특정 기준일(객체) 가 필요한 것은 아닙니다.
+        // => static method로 설계 되어야 합니다.
+//        Date d = new Date(0, 5, 0);
+//        int ret1 = d.HowManyDays(); // 방법 #1. 객체를 만들고 사용하게 하자.
  
         int ret2 = Date.HowManyDays(5); // 방법 #2. 클래스 이름으로 호출가능하게
                                         //        하자
+        int ret3 = Date.HowManyDays(2, 2024);
+
+        // 윤년인지 조사하고 싶다.
+        // 다음중 좋은 방법은 ?
+
+        // 방법 #1. 객체를 만들고 조사하게 하자.
+        Date to = new Date(2024, 11, 26);
+
+        bool b1 = to.IsLeapYear();
+
+        // 방법 #2. static method로 제공하자.
+        bool b2 = Date.IsLeapYear(2024);
     }
 }
