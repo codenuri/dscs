@@ -31,7 +31,14 @@ class Program
 
 //      Car.cnt = 100;
 
-        WriteLine($"{c1.GetCount()}"); // error. static method는
+//      WriteLine($"{c1.GetCount()}"); // error. static method는
         WriteLine($"{Car.GetCount()}");// 클래스이름 으로 호출
     }
 }
+
+// 정리 ( 90 page 박스 참고)
+// static field : 모든 객체가 공유하는 필드
+//                객체가 아닌 타입 자체의 특징(데이타)
+
+// static method : 객체이름이 아닌 클래스 이름으로 호출
+//                 타입 자체의 관련된 기능을 수행하는 메소드 
