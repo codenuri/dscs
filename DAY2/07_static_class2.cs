@@ -22,7 +22,14 @@ class Program
 {
     public static void Main()
     {
-        Math.
+        double ret = Math.Sqrt(2);
 
+        // 대표적인 static class 가 Math, Console 입니다.
+
+        Math m = new Math(); // error
+        Console c = new Console(); // error
+
+        // Console 클래스의 모든 메소드는 static 입니다.
+        // =>그래서 "Console.메소드이름" 으로 사용한것!!!
     }
 }
