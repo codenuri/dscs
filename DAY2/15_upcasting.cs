@@ -61,12 +61,23 @@ class Program
         //     is 연산자 사용
         if ( a is Dog )
         {
-            ((Dog)a).Color = 10;
+            Dog d = (Dog)a;
+            d.Color = 10;
         }
 
         if ( a is Dog d )  // if (a is Dog) Dog d = (Dog)a;
         {
             d.Color = 10; 
+        }
+
+        // #6. as 연산자
+        // 
+        Dog d1 = (Dog)a; // 무조건 캐스팅, a가 Dog 를 가리키지 않으면예외
+        Dog d2 = a as Dog; // a가 Dog 를 가리키지 않으면 null
+
+        if ( d2 != null)
+        {
+            d2.Color = 10;
         }
     }
 }
