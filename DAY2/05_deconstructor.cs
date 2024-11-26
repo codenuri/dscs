@@ -6,6 +6,9 @@ class Point3D
 {
     private int x, y, z;
     public Point3D(int a, int b, int c) => (x, y, z) = (a, b, c);
+
+    public void Deconstruct(out int a, out int b, out int c)
+        => (a, b, c) = (x, y, z);
 }
 class Program
 {
@@ -22,7 +25,13 @@ class Program
         // 방법 #2. deconstruction 기술 사용
         int x, y, z;
         (x, y, z) = p; // 이 코드를 아래 처럼 변경하기로 약속되어 있습니다.
-                       // p.Deconstructor(out x, out y, out z)
+                       // p.Deconstruct(out x, out y, out z)
+        p.Deconstruct(out x, out y, out z); // 직접 호출해도 됩니다.
+
+        // 변수 선언을 () 안에서 해도 됩니다.
+        (int x1, int y1, int z1) = p;
+
+        (int x2, int y2) = p; // 되도록 만들어 보세요
                        
 
 
