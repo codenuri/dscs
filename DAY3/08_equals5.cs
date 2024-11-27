@@ -29,8 +29,8 @@ class Program
         WriteLine($"{object.ReferenceEquals(s3, s4)}"); // False
 
 
-        //      Check(s1, s2); 
-        //		Check(s2, s3); 
-        //		Check(s3, s4); 
+        Check(s1, s2); 
+        Check(s2, s3); 
+        Check(s3, s4); 
     }
 }
