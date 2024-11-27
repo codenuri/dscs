@@ -20,8 +20,12 @@ class Label : IComparable
 	
 	public Label(string s) => title = s;
 
-    public int CompareTo(object? obj)
-    {
+//  public int CompareTo(Label obj)  // 이렇게 하면 편하지만...인터페이스를 먼저 설계하다보니
+    public int CompareTo(object? obj) // 이렇게 만들수 밖에 없었다.
+    {								  // 단, 아래 코드가 복잡해 보이지만.
+									  // 성능저하는 많지 않다.(어차피 참조 일뿐.. )
+									  // 그런데, value type 은 성능 저하 크다(Boxing에서)
+
 		// #1. 인자로 Label 객체를 보내고 있지만 object 타입으로 받았으므로
 		//     다시 Label 타입으로 캐스팅해서 사용해야 title 접근 가능합니다.
 
@@ -32,7 +36,6 @@ class Label : IComparable
 
 		return title.CompareTo(other?.title);  
     }
-
 
     /*
 	public int CompareTo(Label other)
