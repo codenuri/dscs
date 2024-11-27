@@ -8,13 +8,15 @@ class Rect
     // x, y, w, h, 생성자등이 필요 합니다 - 생략
     public void Draw() { WriteLine("draw Rect"); }
 }
-
-
-
+class Circle
+{
+    public void Draw() { WriteLine("draw Circle"); }
+}
 
 class Program
 {
     public static void Main()
     {
+        List<Rect> c = new List<Rect>();
     }
 }
