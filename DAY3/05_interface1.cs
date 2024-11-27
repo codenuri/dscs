@@ -7,11 +7,12 @@ using static System.Console;
 // #2. 해당 타입 설계시 인터페이스를 구현하는 문법으로 만들어져 있습니다.
 // 그래서 아래 같은 메소드 작성이 가능합니다
 
-void Foo(IComaprable c) 
+/*
+void Foo(IComparable c) 
 {
 	// 이 메소드는 CompareTo 메소드가 가 있는 객체만 인자로 받을수 있습니다.
 }
-
+*/
 
 class Program 
 {
