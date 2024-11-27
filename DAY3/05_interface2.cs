@@ -22,7 +22,15 @@ class Label : IComparable
 
     public int CompareTo(object? obj)
     {
-		return title.CompareTo(obj);
+		// #1. 인자로 Label 객체를 보내고 있지만 object 타입으로 받았으므로
+		//     다시 Label 타입으로 캐스팅해서 사용해야 title 접근 가능합니다.
+
+		// #2. 
+		Label? other = obj as Label;
+
+//		if (other == null) { } // 이렇게 하거나 아래처럼 ? 로 해결
+
+		return title.CompareTo(other?.title);  
     }
 
 
