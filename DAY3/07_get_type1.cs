@@ -3,6 +3,11 @@ using static System.Console;
 
 // 121page ~
 
+// GetType() 메소드
+// => object 가 제공하므로 C#의 거의 모든 타입이 가진 메소드
+// => 타입의 정보를 얻을때 사용
+// => C++ RTTI, Java Reflection 개념.
+
 class Program
 {
 	public static void PrintType(object obj)
