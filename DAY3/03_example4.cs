@@ -13,6 +13,19 @@ class Shape
 {
     private int color = 0;
 
+
+    // 아래 메소드는 virtual 로 할까요 ? non-virtual 로할까요 ?
+    // override 할 이유 없습니다. "non- virtual"
+    public void SetColor(int c) { color = c; }
+
+
+    // 모든 도형의 면적구하는 방식은 다르다.
+    // 도형마다 override 해야 한다. virtual 사용
+    public virtual int GetArea() { return 0; }
+
+
+
+
     public virtual void Draw() { WriteLine("draw Shape"); }
 }
 class Rect : Shape
@@ -40,7 +53,16 @@ class Program
             {
                 foreach (var s in c)
                 {
-                    s.Draw(); 
+                    s.Draw(); // 다형성(Polymorphism)
+                              // => 동일한 표현식이 상황(실제 객체)
+                              //    에 따라 다르게 동작하는 것
+                // 객체지향 언어의 3대 특징 : 캡슐화(private, public),
+                //                          상속
+                //                          다형성
+
+                // 다형성은 OCP 를 만족하는 아주 좋은 코딩 스타일입니다.
+                // 위 "s.Draw()" 는 새로운 도형이 추가되어도 
+                // 수정될 필요 없습니다.
                 }
             }
         }
