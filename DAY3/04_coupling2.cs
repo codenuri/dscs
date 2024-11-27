@@ -30,6 +30,11 @@ class HDCamera : ICamera
     public void Take() => WriteLine("Take a HD picture");
 }
 
+class FHDCamera : ICamera
+{
+    public void Take() => WriteLine("Take a FHD picture");
+}
+
 class Program
 {
     public static void Main()
@@ -40,7 +45,24 @@ class Program
         p.Use(c);
 
         HDCamera hc = new HDCamera();
-        p.Use(hc); // ??
+        p.Use(hc);
+
+        FHDCamera fhc = new FHDCamera();
+        p.Use(fhc);
 
     }
 }
+
+// 강한 결합(tightly coupling)
+// => 하나의 클래스가 다른 클래스 사용시 "클래스 이름"을 직접 사용하는것
+// => 유연성 없는 경직된 디자인
+// => OCP 를 만족할수 없다.
+
+
+// 약한 결합(loosely coupling)
+// => 하나의 클래스가 다른 클래스 사용시 규칙을 담은 "인터페이스 이름"
+//    을 통해서 접근 하는 것
+// => 유연성 있는 디자인
+// => OCP 를 만족한다.
+
+// 결국 객체지향 디자인은 "규칙(인터페이스)"를 먼저 만들자는 것이 핵심!!
