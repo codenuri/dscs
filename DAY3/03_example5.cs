@@ -1,6 +1,7 @@
 ﻿using static System.Console;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 
 
 class Shape
@@ -30,10 +31,25 @@ class Shape
 class Rect : Shape
 {
     public override void Draw() { WriteLine("draw Rect"); }
+
+
+    public override  Shape Clone()
+    {
+        Rect r = new Rect();
+        // 자신의 모든 멤버를 r에 복사
+        return r;
+    }
 }
 class Circle : Shape
 {
     public override void Draw() { WriteLine("draw Circle"); }
+
+    public override Shape Clone()
+    {
+        Circle c = new Circle();
+        // 자신의 모든 멤버를 r에 복사
+        return c;
+    }
 }
 
 class Program
@@ -76,9 +92,20 @@ class Program
                     c.Add(r);
                  }
                 */
+
+                // 해결책 #2. k번째 도형이 어떤 도형인지 조사할 필요 없다.
+                //          단지, 복사본 만들어 달라고 요청하면된다.
+                //          java 에서는 이것을 "don't ask do it" 이라고합니다.
+
+                c.Add(c[k].Clone()); // 다형성!!! OCP 만족
             }
         }
     }
 }
 
+// 많은 객체지향 프로그램이 위와 같은 Clone()을 만들어 사용합니다.
+// 그래서 이기법에 이름이 있습니다
+// "prototype" 이라는 이름을 가진 디자인 패턴 입니다.
+// => 이런 이름이 23개가 있습니다.
+// => 이걸 배우는 과정이 디자인 패턴 과정. 
 
