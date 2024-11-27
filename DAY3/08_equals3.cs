@@ -52,6 +52,14 @@ class Program
 		WriteLine($"{object.Equals(p1, p2)}");
 		WriteLine($"{object.Equals(p3, p4)}");	
 
+		// 결론 
+		// "상태 가 동일한가?" 조사는
+		// 1. p1.Equals(p2) 보다는 
+		// 2. object.Equals(p1, p2) 가 좀더 효율적입니다.
+
+		// 그런데, Point 처럼 멤버가 많지 않으면
+		// => p1.Equals(p2) 도 나쁘지 않습니다.
+
 	}
 }
 
