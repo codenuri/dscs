@@ -16,23 +16,22 @@ interface IComparable
 // C# 2.0 : template(generic)문법이 도입됩니다.
 //          사용자가 타입을 지정하는 문법(내일 자세한 문법 배웁니다.)
 // 그래서 C# 2.0 부터 아래 인터페이스 도입됩니다.
+/*
 interface IComparable<T>
 {
     int CompareTo(T obj);
 }
+*/
 
 
-
-class Label : IComparable
+class Label : IComparable<Label>
 {
     private string title;
 
     public Label(string s) => title = s;
 
-     public int CompareTo(object? obj) 
+     public int CompareTo(Label? other) 
     {                                 
-        Label? other = obj as Label;
-
         return title.CompareTo(other?.title);
     }
 }
@@ -44,6 +43,14 @@ class Program
         Label d1 = new Label("GOOD");
         Label d2 = new Label("BAD");
 
+        int ret1 = d1.CompareTo(d2); // ok. d2 는 Label 타입
+
+        // C#의 대부분의 타입은 object 로 부터 파생 되므로
+        // 대부분의 객체는 object 로 가리킬수 있습니다.
+        object obj = d2;
+
+        int ret1 = d1.CompareTo(obj); // 되는게 좋으세요 ?
+                                      // 안되는 게 좋으세요 ?
     }
 
 
