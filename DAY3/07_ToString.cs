@@ -45,8 +45,8 @@ class Program
 		int[] x = { 1, 2, 3 };
 		List<int> y = new List<int>();
 
-		WriteLine(x);
-        WriteLine(y);
+		WriteLine(x); // 요소가 나오면 좋을거 같지만. 타입의 이름 출력
+        WriteLine(y); // 즉, object 의 기본 구현 출력
 
 
     }
