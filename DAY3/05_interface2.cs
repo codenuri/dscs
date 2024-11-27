@@ -1,5 +1,5 @@
 using static System.Console;
-
+/*
 // C# 은 인터페이스로 메소드 이름을 약속합니다.
 // IComparable 를 만들때를 생각해 봅시다.
 interface IComparable
@@ -12,7 +12,7 @@ interface IComparable
 	// 아래 처럼 수정되었습니다.
     int CompareTo(object? obj);
 }
-
+*/
 
 class Label : IComparable  
 {
