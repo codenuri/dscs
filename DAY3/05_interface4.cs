@@ -24,13 +24,19 @@ interface IComparable<T>
 */
 
 
-class Label : IComparable<Label>
+class Label : IComparable, IComparable<Label>
 {
     private string title;
 
     public Label(string s) => title = s;
 
-     public int CompareTo(Label? other) 
+    public int CompareTo(object? obj)
+    {
+        Label? other = obj as Label;
+        return title.CompareTo(other?.title);
+    }
+
+    public int CompareTo(Label? other) 
     {                                 
         return title.CompareTo(other?.title);
     }
@@ -56,3 +62,13 @@ class Program
 
 }
 
+
+// C# 1.0 에 generic 이 없어서
+// 대부분의 인터페이스는 인자가 object 였습니다.
+// 1. reference type 은 성능저하가 크지는 않지만,
+//    코드 작성시 캐스팅 등이 복잡해 집니다.
+// 2. value type 은 성능저하가 아주 큽니다.(Boxing)
+
+// 그래서 C# 2.0 에서 Generic 인터페이스 등장. 
+
+// 권장 : non-generic, generic 버전 모두 구현하세요.. 
