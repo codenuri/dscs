@@ -35,13 +35,13 @@ class Program
                     // => s는 Shape 타입이지만, 결국 Rect 나 Circle을 가리키게된다.
                     // => 어떤 객체인지 조사해서 캐스팅후 사용하자.
 
-                    if ( s is Rect r )
+                    if ( s is Rect r ) // if (s is Rect ) Rect r = (Rect)s
                     {
                         r.Draw();
                     }
-                    else if ( s is Circle c)
+                    else if ( s is Circle circle)
                     {
-                        c.Draw();
+                        circle.Draw();
                     }
                 }
             }
