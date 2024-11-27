@@ -20,3 +20,10 @@ Console.WriteLine($"{x3[0]}"); // 1
 
 Console.WriteLine($"{object.ReferenceEquals(x1, x2)}"); // True
 Console.WriteLine($"{object.ReferenceEquals(x1, x3)}"); // False
+
+// C#을 정말 잘하려면
+// 1. C# 문법을 대략 익히세요
+// 2. 디자인 패턴을 학습하세요
+// 3. 다시 디자인을 알고 있는 상태에서 다시 C#을 보세요!!!
+// 4. WPF 도 모두 디자인 패턴으로 설계된 라이브러리 !!!
+//   => WPF 자체보다 디자인이 중요
