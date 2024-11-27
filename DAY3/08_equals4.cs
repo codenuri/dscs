@@ -53,7 +53,11 @@ class Program
         WriteLine($"{(object)p3 == (object)p4}"); // False
 
 
-        WriteLine($"{ReferenceEquals(a, b)}");
+        WriteLine($"{ReferenceEquals(p3, p4)}");
+
+        // 아래 object.ReferenceEquals 이 우리가 만든
+        // "ReferenceEquals" 와 동일
+        WriteLine($"{object.ReferenceEquals(p3, p4)}");
     }
 
 	public static bool ReferenceEquals(object? a, object? b)
