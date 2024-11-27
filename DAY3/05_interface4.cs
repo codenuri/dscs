@@ -49,7 +49,7 @@ class Program
         // 대부분의 객체는 object 로 가리킬수 있습니다.
         object obj = d2;
 
-        int ret1 = d1.CompareTo(obj); // 되는게 좋으세요 ?
+        int ret2 = d1.CompareTo(obj); // 되는게 좋으세요 ?
                                       // 안되는 게 좋으세요 ?
     }
 
