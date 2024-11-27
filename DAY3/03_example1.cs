@@ -26,6 +26,7 @@ class Program
 {
     public static void Main()
     {
-        List<Rect> c = new List<Rect>();
+//      List<Rect> c = new List<Rect>();   // Rect 객체만 보관하는 collection
+        List<Shape> c = new List<Shape>(); // 모든 도형 객체를 보관하는 collection
     }
 }
