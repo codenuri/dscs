@@ -1,3 +1,4 @@
+using System.Collections;
 using static System.Console;
 
 // 02_override => 07_ToString.cs 
@@ -30,12 +31,23 @@ class Point
 
 class Program 
 {
-public static void Main()
-{
-	Point p = new Point(1, 2);
-		
-	string? s = p.ToString();
+	public static void Main()
+	{
 
-	WriteLine( s );
-}
+		Point p = new Point(1, 2);
+		
+		string? s = p.ToString();
+
+		WriteLine( s );
+
+		WriteLine(p); // 이순간 p.ToString() 의 결과를 화면 출력 
+
+		int[] x = { 1, 2, 3 };
+		List<int> y = new List<int>();
+
+		WriteLine(x);
+        WriteLine(y);
+
+
+    }
 }
