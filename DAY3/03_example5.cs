@@ -112,5 +112,5 @@ class Program
 // 리팩토링에서 사용되는 용어 입니다. 이해해 보세요
 
 // "replace conditional with polymorphism"
-// "제어문을 다형성으로 변경해라"
+// "제어문(if, switch) 을 다형성(가상메소드)으로 변경해라"
 
