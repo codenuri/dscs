@@ -97,7 +97,7 @@ class Program
                 //          단지, 복사본 만들어 달라고 요청하면된다.
                 //          java 에서는 이것을 "don't ask do it" 이라고합니다.
 
-                c.Add(c[k].Clone()); // 다형성!!! OCP 만족
+                c.Add(c[k-1].Clone()); // 다형성!!! OCP 만족
             }
         }
     }
@@ -108,4 +108,9 @@ class Program
 // "prototype" 이라는 이름을 가진 디자인 패턴 입니다.
 // => 이런 이름이 23개가 있습니다.
 // => 이걸 배우는 과정이 디자인 패턴 과정. 
+
+// 리팩토링에서 사용되는 용어 입니다. 이해해 보세요
+
+// "replace conditional with polymorphism"
+// "제어문을 다형성으로 변경해라"
 
