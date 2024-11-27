@@ -21,7 +21,12 @@ class Program
 
 		// refeference 타입정리!
 		// #1. == 연산자
-		WriteLine($"{p1 == p2}");
-        WriteLine($"{p3 == p4}");
+		// => 동일한 객체인가를 조사
+		WriteLine($"{p1 == p2}"); // True
+        WriteLine($"{p3 == p4}"); // False
+
+        // #2. object 로 부터 물려받는 Equals() 가상 메소드
+        WriteLine($"{p1.Equals(p2)}");
+        WriteLine($"{p3.Equals(p4)}");
     }
 }
