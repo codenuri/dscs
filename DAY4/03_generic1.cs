@@ -21,7 +21,9 @@ class Program
     // 인자의 타입만 다르고 구현이 동일하다면
     // 메소드를 만들지 말고
     // 메소드를 만드는 틀을 만들자! => Generic, Template 이라는 기술
-    public static void swap<T>(ref T a, ref T b)
+    // C++ : template 이라는 용어 사용
+    // Java, C# : Generic 이라는 용어 사용
+    public static void swap<T>(ref  a, ref T b)
     {
         T tmp = a;
         a = b;
@@ -44,5 +46,6 @@ class Program
         // #2. 타입인자를 전달해도 되고 생략해도 됩니다.
         swap<int>(ref n1, ref n2);  // 타입 인자 전달
         swap(ref n1, ref n2);       // 타입 인자 생략
+                                    // 함수의 인자로 T 타입 추론
     }
 }
