@@ -8,7 +8,8 @@ delegate bool MyPredicate<T>(T a);
 class Program
 {
 
-    public static int MyFindIndex<T>(T[] arr, MyPredicate<T> match)
+//  public static int MyFindIndex<T>(T[] arr, MyPredicate<T> match)
+    public static int MyFindIndex<T>(T[] arr, Predicate<T> match)
     {
         for (int i = 0; i < arr.Length; i++)
         {
@@ -32,7 +33,7 @@ class Program
         WriteLine($"{ret2}"); // 2
     }
 
-    public static bool Foo(int a)
+    public static bool Foo(double a)
     {
         return a % 3 == 0;
     }
