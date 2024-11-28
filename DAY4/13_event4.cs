@@ -32,7 +32,7 @@ class Program
 
         btn.Click += Foo; // btn.add_ClickHandler(Foo)
         btn.Click += Goo; // btn.add_ClickHandler(Goo)
-        btn.Click += Hoo;
+        btn.Click += Hoo; // 지금 왼쪽 코드는 에러.
 
 
         btn.UserPressButton();
