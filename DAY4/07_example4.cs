@@ -17,7 +17,9 @@ class Program
         // 내림 차순 정렬해 보세요 
         // 핵심 : 정렬시 필요한 2개의 요소의 비교를 어떻게 할지 사용자가 전달
 
+//        Array.Sort(x, 메소드);
 
+        Comparison<int> c;
     
     }
 
