@@ -33,7 +33,16 @@ class Program
         int n1 = 10,  n2 = 20;
         double d1 = 1.1, d2 = 2.3;
 
-        swap<int>(ref n1, ref n2);
+        // #1. 원리
+        swap<int>(ref n1, ref n2); // 1. swap 틀에 int 를 넣어서
+                                    //   swap(ref int, ref int) 메소드 생성  
+                                    // 2. 이 위치는 "call swap(int, int)"
+
 		swap<double>(ref d1, ref d2);
+        // => 결국 위 2줄때문에 "swap" 메소드는 실제 2개가 생성됩니다.
+
+        // #2. 타입인자를 전달해도 되고 생략해도 됩니다.
+        swap<int>(ref n1, ref n2);  // 타입 인자 전달
+        swap(ref n1, ref n2);       // 타입 인자 생략
     }
 }
