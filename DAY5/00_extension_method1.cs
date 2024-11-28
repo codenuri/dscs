@@ -24,6 +24,11 @@ class Example
 // #2. static method 의 1번째 인자로 "this 메소드를 추가할 클래스이름"
 // #3. 아래 코드에서 "MyExtension" 이름은 아무이름이나 사용해도 됩니다.
 
+// Example 에 그냥 Goo 추가하면 안되나요 ?
+// => Example 을 다른 사람이 만든 클래스이고,
+// => 소스가 없이 이미 컴파일된 라이브러리 형태라면 메소드를 추가할수 없습니다.
+// => extension 메소드로는 추가 가능.
+
 static class MyExtension
 {
 	public static void Goo(this Example e, int n)
