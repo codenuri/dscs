@@ -4,7 +4,13 @@ delegate void ClickHandler();
 
 class Button
 {
-    public ClickHandler? Click = null;
+    // 아래 처럼만들면 등록할때 +=, -=, = 을 모두 사용가능
+    //  public ClickHandler? Click = null;
+
+
+    // 아래 처럼 event 라고 붙이면 +=, -= 만 사용가능    
+    public event ClickHandler? Click = null;
+
 
     public void UserPressButton()
     {
@@ -23,7 +29,10 @@ class Program
         Button btn = new Button();
 
         btn.Click = Foo;
-        
+        btn.Click += Goo;
+//      btn.Click += Hoo;
+        btn.Click = Hoo; // 실수로 += 대신 = 로 했다.
+
 
         btn.UserPressButton();        
     }
