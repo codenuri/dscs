@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Collections;
+
+class Program
 {
     public static void Main()
     {
@@ -12,8 +14,9 @@
         // 2. 배열은 IList 인터페이스를 구현했습니다.
         // 3. 그런데, 이코드는 에러 입니다.
 
-        IList<int> c = x; // 배열을 IList 인터페이스에 담으면
+        IList c = x; // 배열을 IList 인터페이스에 담으면
         c.Add(1);         // Add 호출 가능. 하지만 사용시 예외 발생. 
                           // "Add()" 에서 정의로 이동해 보세요
+
     }
 }
