@@ -9,7 +9,7 @@ class Program
 
         Array.Sort(x);  // 오름 차순 정렬 입니다.
 
-        for(int e in x)
+        foreach (int e in x)
             Write($"{e}, "); // 1, 3, 4, 6, 8
 
         WriteLine(); // 개행
@@ -20,11 +20,10 @@ class Program
         Array.Sort(x, Foo); // x의 배열에서 2개의 요소를 Foo 에 보내서
                             // 0보다 큰값이 나오면 swap 합니다.
                             
-        for(int e in x)
+        foreach(int e in x)
             Write($"{e}, "); // 1, 3, 4, 6, 8
 
         WriteLine(); // 개행
-
 
         //        Comparison<int> c;
 
