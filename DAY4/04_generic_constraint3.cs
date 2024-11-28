@@ -22,12 +22,22 @@ class Program
 
 
 /*
-class C1<T> where T : struct           {}
-class C2<T> where T : class            {}
-class C3<T> where T : class?           {}
-class C4<T> where T : notnull          {}
+class C1<T> where T : struct           {} // value
+class C2<T> where T : class            {} // reference
+class C3<T> where T : class?           {} // null 가능
+class C4<T> where T : notnull          {} // null 불가능 타입
 class C5<T> where T : unmanaged        {}
-class C6<T> where T : new()    		  {}
+
+class C6<T> where T : new()        // 디폴트 생성자(인자없는 생성자)
+{
+	public void Foo()
+	{
+		T a = new T(); // 제약이 없으면 안됨
+	}
+
+}
+
+
 // class C7<T> where T : base_class_name  {}
 // class C8<T> where T : base_class_name? {}
 // class C9<T> where T : interface_name   {}
