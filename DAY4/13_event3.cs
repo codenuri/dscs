@@ -28,10 +28,12 @@ class Program
     {
         Button btn = new Button();
 
-        btn.Click = Foo;
+//      btn.Click = Foo;    // error. 처음 등록도 += 로해야 합니다.
+        btn.Click += Foo;
         btn.Click += Goo;
-//      btn.Click += Hoo;
-        btn.Click = Hoo; // 실수로 += 대신 = 로 했다.
+        btn.Click += Hoo;
+//      btn.Click = Hoo; // 실수로 += 대신 = 로 했다.
+                         // event 였다면 error.
 
 
         btn.UserPressButton();        
