@@ -10,7 +10,7 @@ class Program
 		//				  배열관련 다양한 작업을 위한 static method제공
 		
 		// #1. sort 하려면
-		Array.Sort(x);
+//		Array.Sort(x);
 
 
         // #2. 배열에서 선형 검색
@@ -24,7 +24,7 @@ class Program
 		//			   메소드는 인자 한개이고, bool 반환해야 한다.
 		int ret2 = Array.FindIndex(x, Foo);
         
-		WriteLine($"{ret2}");
+		WriteLine($"{ret2}"); // 2
     }
 	public static bool Foo(int a)
 	{
