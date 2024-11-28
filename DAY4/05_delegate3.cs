@@ -29,11 +29,18 @@ class Program
 {
     public static void Main()
     {
-        MyFunc f = Foo;  // f는 Foo 의 호출 정보(메소드 주소 와 객체정보)
-                         // 를 담게 됩니다.
+        // 결국 MyFunc 는 컴파일러가 만든 "class" 의 이름입니다.
+        // => C#의 모든 객체는 new로 생성해야 합니다.
+        // => 단, 표준 타입은 단축 표기로 해서 new  없이 가능
+        // => delegate 도 단축 표기법 가능
 
-        f(10);          // Foo(10)
-        f.Invoke(10);   // Foo(10)
+        MyFunc f1 = new MyFunc(Foo); // 정확한 표기법(항상 생성)
+        MyFunc f2 = Foo;             // 이 표기법도 허용
+                                     // 이 표기법 권장(pool 에서 꺼내기)
+                                     // string 의 intern pool 과 유사
+
+        f1(10);          
+        f1.Invoke(10);   
     }
 
     public static void Foo(int arg)
