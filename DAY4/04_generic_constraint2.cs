@@ -1,4 +1,5 @@
 using System;
+using System.Net.Mime;
 using static System.Console;
 
 
@@ -41,9 +42,24 @@ class Program
         WriteLine($"{Max1(10, 20)}");
         WriteLine($"{Max1("AAA", "CC")}");
 
-        //      Max1(p1, p2);   // 컴파일 에러. IComparable 을 구현하지 않은 타입
-        Max2(p1, p2);
-        Max2(10, 20);
-    }
+//      Max1(p1, p2);   // 컴파일 에러. IComparable 을 구현하지 않은 타입
 
+        Max2(10, 20); // ok 
+        Max2(p1, p2); // 에러.. 그런데, compile time 이 아닌
+                      // runtime error. 캐스팅이 실패 한것
+
+        Max1(p1, p2); // 컴파일 에러. 인자가 조건을 만족하지 않은것
+
+    }
 }
+/*
+// 참고 : C++ 도 C++20 부터 constraint 를 지정할수 있습니다.
+template<typename T> require std::is_pointer<T> 
+void foo(T a) 
+{
+    int n = *a;
+}
+
+int k = 0;
+foo(k); // 여기서 에러가 아니다.
+*/
