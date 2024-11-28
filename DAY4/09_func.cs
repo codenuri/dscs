@@ -1,8 +1,8 @@
-
+/*
 delegate R Func<R>();
 delegate R Func<T, R>(T arg);
 delegate R Func<T1, T2, R>(T1 arg1, T2 arg2);
-
+*/
 class Program 
 {
 	public static int    M1() => 0;
@@ -12,9 +12,9 @@ class Program
 
 	public static void Main()
 	{
-		? f1 = M1;
-		? f2 = M2;
-		? f3 = M3;
-		? f4 = M4;		
+		Func<int> f1 = M1;
+		Func<int, double> f2 = M2;
+		Func<double, string> f3 = M3;
+		Func<int, double, object> f4 = M4;		
 	}
 }
