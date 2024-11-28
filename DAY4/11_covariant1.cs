@@ -8,7 +8,12 @@ class Derived : Base
 {	
 }
 
-delegate R MyFunc<R>();
+// delegate R MyFunc<R>(); // 정확한 타입만 가능 
+
+delegate R MyFunc<out R>(); // 호환 가능한 타입이면 ok
+							// MyFunc<Base> 에 MyFunc<Derived> 를 넣을수
+							// 있다!
+
 
 class Program 
 {
