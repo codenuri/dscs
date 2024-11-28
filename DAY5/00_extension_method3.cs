@@ -1,5 +1,16 @@
 using static System.Console;
 
+static class StringExtension
+{
+	public static int WordCount( this string s)
+	{
+		//		string[] arr = s.Split(); // 문자열을 단어의 배열로
+		//		return arr.Length;   // 배열 갯수
+
+		return s.Split().Length;
+	}
+}
+
 class Program
 {
 	public static void Main()
