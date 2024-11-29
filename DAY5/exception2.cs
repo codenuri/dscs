@@ -11,7 +11,7 @@ class Database
         // throw : 예외를 던질때 사용하는 키워드.
         throw new DBBackupException();
     }
-    public void Remove() { WriteLine("DB Remove"); }
+    public void Remove() { Console.WriteLine("DB Remove"); }
 }
 
 class Program
