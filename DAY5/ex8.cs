@@ -14,6 +14,8 @@ class MainWindow : Window
 
         FileStream fs = new FileStream("../../../first.xaml", FileMode.Open);
 
+        // XML 내용을 객체를 생성하고
+        // 최상위 객체의 참조를 반환.캐스팅해서 사용하면 됩니다.
         sp = (StackPanel)XamlReader.Load(fs);
 
         fs.Close(); // 파일 닫기 
