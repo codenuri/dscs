@@ -16,7 +16,8 @@ class MainWindow : Window
 
 
         Button btn = new Button();
-        
+        btn.Content = "확인";
+
         this.Content = btn;
 
     }
