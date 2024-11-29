@@ -10,6 +10,8 @@ class Database
     {
         // throw : 예외를 던질때 사용하는 키워드.
         throw new DBBackupException();
+
+
     }
     public void Remove() { Console.WriteLine("DB Remove"); }
 }
@@ -37,3 +39,15 @@ class Program
         db.Remove();
     }
 }
+
+// 권장. 모든 객체지향 언어에서
+
+// #1. 간단한(심각하지 않은) 오류 발생시
+// => 반환값으로 알려주세요
+
+// #2. 아주 심각한 경우
+// => 예외를 던져서
+// => 오류 처리를 하지 않은 경우는 프로그램이 종료 되게 하세요.. 
+
+// 단, C++ 의 경우 예외를 
+// 임베디드에서는 "성능 이슈"로 사용하지 않은 경우가 있습니다.
