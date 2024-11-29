@@ -26,7 +26,7 @@ class Program
 
         // #1. 대부분의 컬렉션에는 enumerator 를 꺼내는 메소드가 있습니다
         var e1 = c1.GetEnumerator(); // List 의 enumerator
-        var e2 = c2.GetEnumerator(); // Linked 의 enumerator
+        var e2 = c2.GetEnumerator(); // LinkedList 의 enumerator
 
         // #2. Enumerator 의 사용법은 동일합니다.
         // => e1, e2 는 다른 타입이지만 같은 방법사용
@@ -35,6 +35,8 @@ class Program
             Console.WriteLine( e1.Current );
 
 
+        while (e2.MoveNext())
+            Console.WriteLine(e2.Current);
     }
 }
 
