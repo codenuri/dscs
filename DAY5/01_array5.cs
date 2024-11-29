@@ -10,19 +10,21 @@
 int[] arr1 = { 1, 2, 3, 4, 5 };
 int[,] arr2 = { { 1, 2,3 }, { 3, 4, 5 }};
 
-WriteLine(arr1.Length);
-WriteLine(arr2.Length);
-WriteLine(arr2.GetLength(0));
-WriteLine(arr2.GetLength(1));
+WriteLine(arr1.Length); // 5
+WriteLine(arr2.Length); // 6
+WriteLine(arr2.GetLength(0)); // 2
+WriteLine(arr2.GetLength(1)); // 3
+
+
 
 /*
-// method from object - 4개
+// method from object - 4개(non-static)
 arr.GetType();
 arr.ToString();
 arr.GetHashCode();
 arr.Equals();
 
-// method from Array - 10개
+// method from Array - 10개(non-static)
 arr.GetEnumerator();
 arr.SetValue();
 arr.GetValue();
@@ -31,7 +33,7 @@ arr.Clone();
 arr.CopyTo();
 arr.GetLength();
 arr.GetLongLength();
-arr.GetLowerBound();
+arr.GetLowerBound(); // 구글 "C# array GetLowerBound" 검색
 arr.GetUpperBound();
 */
 
