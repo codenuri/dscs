@@ -43,6 +43,7 @@ class Program
     }
 }
 
+/*
 // IEnumerable<T> : 컬렉션의 인터페이스
 // IEnumerator<T> : enumerator(반복자)인터페이스
 
@@ -57,7 +58,8 @@ class ListEnumerator<T> : IEnumerator<T>
     // List의 첫번째 요소를 가리킬수 있는 
     // 멤버
     // 약속된 방식으로 이동
+    MoveNext();
 }
 
-
-
+ListEnumerator<T> e = new ListEnumerator<T>();
+*/
