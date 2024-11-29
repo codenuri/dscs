@@ -1,5 +1,14 @@
 ﻿<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <Button>확인1</Button>
     <Button>확인2</Button>
-    <Button>확인3</Button>
+    <Button Margin="5" FontFamily="Consolas" FontSize="30">확인3</Button>
+
+    <ListBox Background="Red">
+        <ListBoxItem>
+            AAA
+            BBB
+            CCC
+        </ListBoxItem>
+    </ListBox>
+    
 </StackPanel>
