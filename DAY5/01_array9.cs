@@ -5,11 +5,13 @@
 // 그런데, 메소드 인자로 "정책함수"를 받을수 있어야 합니다.
 // 그래서 인터페이스 개념을 사용합니다.
 // C#도 지원합니다.
-
+/*
+// 이미 C# 표준에 아래 인터페이스 있습니다. 
 interface IComparer<T>
 {
     int Compare(T x, T y);
 }
+*/
 
 // 앞으로 비교정책으로 사용할 모든 객체는 ICompare<T> 를 구현해야 합니다.
 // 비교 정책 객체
@@ -50,7 +52,19 @@ class Program
 
         foreach (int e in arr)
             Console.WriteLine($"{e}, ");
-
         Console.WriteLine();
+
+   
     }
 }
+
+// 핵심 정리
+// Array.Sort() 등을 사용할때 비교 정책을 변경하고 싶을때가 있습니다.
+// 2번째 인자로 비교정책을 보내면 됩니다.
+// 비교정책을 보내는 방법 
+
+// 방법 #1. 람다표현식등의 메소드를 전달하는 방식 - delegate로 받고 있습니다.
+// 방법 #2. 약속된 인터페이스(IComparer<T>) 를 구현한 객체를 보내는 방식
+
+// Comparison<T> : delegate
+// IComparer<T>  : interface
