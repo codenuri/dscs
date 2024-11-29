@@ -24,10 +24,20 @@ class Program
 //      IEnumerator<int> e = c.GetEnumerator(); // 이렇게 열거자 꺼내도 되고
 
         // 컬렉션이므로 foreach에 도 사용가능
+
+        arr[0] = 99;
+        /*
         foreach(int e in c )
         {
             Console.WriteLine(e);
         }
+        */
 
+        var c2 = arr.Where(x => x % 2 == 1).Where(x => x < 5);
+
+        foreach (int e in c2)
+        {
+            Console.WriteLine(e);
+        }
     }
 }
