@@ -12,7 +12,8 @@ int[] arr = { 1, 2, 3, 4, 5 };
 Array.Sort(arr);
 
 // 동일이름의 메소드가 여러개 버전이 있습니다.
-int idx1 = Array.IndexOf(arr, 3);
+// => 모든 예제는 MS 사이트 참고하세요
+int idx1 = Array.IndexOf(arr, 3);       // 전체 검색
 int idx2 = Array.IndexOf(arr, 3, 2);    // 2번째 부터 검색 
 int idx3 = Array.IndexOf(arr, 3, 2, 2); // 2번째 2개만 검색
 
