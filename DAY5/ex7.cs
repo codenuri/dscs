@@ -27,10 +27,14 @@ class MainWindow : Window
         sp.Children.Add(btn2);
         sp.Children.Add(btn3);
 
-        // btn1 clieck 시 메세지 박스 띄워보세요
-
+        // btn1 click 시 메세지 박스 띄워보세요
+        btn1.Click += Btn1_Click;
     }
 
+    private void Btn1_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("button1 click");
+    }
 }
 
 
