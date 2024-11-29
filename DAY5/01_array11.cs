@@ -17,7 +17,7 @@ class Program
 
         foreach (int e in x1)
             Console.WriteLine($"{e}, ");
-        Console.WriteLine( )
+        Console.WriteLine();
     }
 }
 
