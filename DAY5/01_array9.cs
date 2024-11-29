@@ -6,29 +6,29 @@
 // 그래서 인터페이스 개념을 사용합니다.
 // C#도 지원합니다.
 
-interface ICompare<T>
+interface IComparer<T>
 {
     int Compare(T x, T y);
 }
 
 // 앞으로 비교정책으로 사용할 모든 객체는 ICompare<T> 를 구현해야 합니다.
 // 비교 정책 객체
-class MyCompare : ICompare<int>
+class MyCompare : IComparer<int>
 {
     public int Compare(int x, int y) => y.CompareTo(x);
 }
-
-
 
 class Program
 {
     public static void Swap(ref int x, ref int y)
     {
+        
         int t = x; x = y; y = t;
     }
 
-    // #2. 
-    public static void Sort(int[] arr, Comparison<int> cmp)
+    // #2. 인자로 메소드가 아닌 객체가 받는 방식
+    // => java style 인데, C# 도 지원하는 방식
+    public static void Sort(int[] arr, IComparer<int> cmp)
     {
         var size = arr.Length;
 
@@ -36,7 +36,7 @@ class Program
         {
             for (int j = i + 1; j < size; j++)
             {
-                if (cmp(arr[i], arr[j]) > 0)
+                if (cmp.Compare(arr[i], arr[j]) > 0)
                     Swap(ref arr[i], ref arr[j]);
             }
         }
@@ -46,7 +46,7 @@ class Program
     {
         int[] arr = { 1, 3, 5, 7, 9, 2, 4, 6, 8, 10 };
 
-        Sort(arr, (a, b) => b.CompareTo(a));
+        Sort(arr, new MyCompare() );
 
         foreach (int e in arr)
             Console.WriteLine($"{e}, ");
