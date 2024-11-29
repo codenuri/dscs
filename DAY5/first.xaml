@@ -1,0 +1,5 @@
+﻿<StackPanel>
+    <Button>확인1</Button>
+    <Button>확인2</Button>
+    <Button>확인3</Button>    
+</StackPanel>
