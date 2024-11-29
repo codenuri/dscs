@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// exception1.cs
 
-namespace DAY5
+// C# 예외
+// 1. Exception 에서 파생된 클래스를 설계합니다.
+class DBBackupException : Exception { };
+
+class Database
 {
-    internal class exception2
+    public void Backup() 
     {
+        // throw : 예외를 던질때 사용하는 키워드.
+        throw new DBBackupException();
+    }
+    public void Remove() { WriteLine("DB Remove"); }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        Database db = new Database();
+        db.Backup();
+        db.Remove();
     }
 }
