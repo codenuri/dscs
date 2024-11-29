@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using static System.Console;
 
+// 후방 삽입 : List 가 아주 빠릅니다.
+// 전방(중간) 삽입 : List 는 느립니다.(메모리 복사 발생)
+
 class Program
 {
-    private const int size = 10_000_000;
+    private const int size = 100_000;
 
     public static void Ex1()
     {
@@ -14,7 +17,8 @@ class Program
 
         for (int i = 0; i < size; i++)
         {
-            c.AddLast(i);
+//          c.AddLast(i);
+            c.AddFirst (i);
         }
     }
 
@@ -24,7 +28,8 @@ class Program
 
         for (int i = 0; i < size; i++)
         {
-            c.Add(i);
+            //          c.Add(i);
+            c.Insert(0, i);
         }
     }
 
