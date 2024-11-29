@@ -29,8 +29,8 @@ class Program
         IEnumerator<int> e4 = c2.GetEnumerator();
 
         // 클래스 이름 알고 싶으면
-        WriteLine(e1.GetType().Name);
-        WriteLine(e2.GetType().Name);
+        WriteLine(e3.GetType().FullName);
+        WriteLine(e4.GetType().FullName);
     }
 }
 
