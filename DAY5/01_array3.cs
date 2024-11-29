@@ -18,8 +18,8 @@ List<int> c2 = { 1, 2, 3, 4, 5 };// error. {}는 배열 초기화만 가능
 
 int[] arr6 = (int[])Array.CreateInstance(typeof(int), 5);
 
-var arr7 = { 1, 2, 3, 4, 5 };
-var arr8 = [1, 2, 3, 4, 5];
-var arr9 = new[]{ 1, 2, 3, 4, 5 };
+var arr7 = { 1, 2, 3, 4, 5 }; // error
+var arr8 = [1, 2, 3, 4, 5];   // error
+var arr9 = new[]{ 1, 2, 3, 4, 5 }; // ok
 
 
